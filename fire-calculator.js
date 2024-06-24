@@ -67,6 +67,7 @@ document.getElementById('fire-calculator').addEventListener('submit', function(e
     const { finalAssets, failedYears, successRate } = computeFinalAssetsAndFailures({
         startingAsset,
         spendingInput,
+        mortgage,
         yearsLeftOnMortgage,
         childrenInfo,
         assetsStock,
@@ -91,6 +92,7 @@ function getHistoricalReturns(year, historicalData) {
 function computeFinalAssetsAndFailures({
     startingAsset,
     spendingInput,
+    mortgage,
     yearsLeftOnMortgage,
     childrenInfo,
     assetsStock,
@@ -108,6 +110,7 @@ function computeFinalAssetsAndFailures({
         let endingAssets = computeAssetsForPeriod({
             startingAsset,
             spendingInput,
+            mortgage,
             yearsLeftOnMortgage,
             childrenInfo,
             assetsStock,
@@ -127,6 +130,7 @@ function computeFinalAssetsAndFailures({
     let finalAssets = computeAssetsForPeriod({
         startingAsset,
         spendingInput,
+        mortgage,
         yearsLeftOnMortgage,
         childrenInfo,
         assetsStock,
@@ -146,6 +150,7 @@ function computeFinalAssetsAndFailures({
 function computeAssetsForPeriod({
     startingAsset,
     spendingInput,
+    mortgage,
     yearsLeftOnMortgage,
     childrenInfo,
     assetsStock,
